@@ -10,7 +10,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_model():
-    return joblib.load("diabetes_model.pkl")
+    return joblib.load("diabetes_model_small.pkl")
 
 st.title("AI-Based Healthcare Analysis")
 st.header("Diabetes Prediction Using Machine Learning")
@@ -19,7 +19,7 @@ st.write(
     "Enter the details below to get a machine-learning prediction."
 )
 
-if not os.path.exists("diabetes_model.pkl"):
+if not os.path.exists("diabetes_model_small.pkl"):
     st.error("Model file not found!")
     st.stop()
 
